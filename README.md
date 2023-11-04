@@ -1,17 +1,34 @@
 # #30DayMapChallenge 2023
 
-https://30daymapchallenge.com/
+[link to site](https://30daymapchallenge.com/)
 
 ![This year's themes](30dmc-2023.png)
 
-## day 1
+## day 1 - points
 Triangulation pillars of the Great Britain coloured by elevation
-![day1](day1_points/day1.png)
 
-## day 2
+<img src="day1_points/day1.png" width=300>
+
+- data from Ordnance Survey
+
+## day 2 - lines
 Geological fault lines and railways of Scotland
-![day2](day2_lines/day2.png)
 
-## day 3
+<img src="day2_lines/day2.png" width=300>
+
+- data from OSM and BGS
+
+## day 3 - polygons
 Finnish lakes
-![day3](day3_polygons/day3.png)
+
+<img src="day3_polygons/day3.png" width=300>
+
+- data from Finnish Environment Institute (Syke) and Natural Earth
+
+## day 4 - a bad map
+Best restaurants in Tokyo
+- endeavoured to make include many incongruities
+
+<img src="day4_badmap/day4.png" width=300>
+
+- data from OSM and Natural Earth
