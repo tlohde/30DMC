@@ -27,7 +27,7 @@ Finnish lakes
 
 ## day 4 - a bad map
 Best restaurants in Tokyo
-- endeavoured to make include many incongruities
+- endeavoured to include many incongruities
 
 <img src="day4_badmap/day4.png" width=300>
 
