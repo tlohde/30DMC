@@ -32,3 +32,22 @@ Best restaurants in Tokyo
 <img src="day4_badmap/day4.png" width=300>
 
 - data from OSM and Natural Earth
+
+## day 5 - analog
+Route Sheet
+
+<img src="day5_analog/day5.png" width=300>
+
+- route sheet courtesy of Audax Club Hackney
+
+## day 6 - asia
+The Pole of Inaccessibility
+
+<img src="day6_asia/day6.png" width=300>
+
+- the point most distant from the coast
+- Garcia-Castellanos & Lombardo (2007) identified two points: 44.29°N 82.19°E (2,510±10 km) and 45.28°N 88.14°E (2,514±7 km)
+- Instead of simply using their points, I endeavoured to find them / see how close I could get myself...
+- used a clumsy, inefficient and basic search routine, involving generating lots of buffers in different Azimuthal Equidistant Projections.
+- I learnt a lot...and my code gets to within 100 km of the recognised values.
+- Coastline/country data from Natural Earth
