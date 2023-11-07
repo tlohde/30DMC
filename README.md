@@ -51,3 +51,12 @@ The Pole of Inaccessibility
 - used a clumsy, inefficient and basic search routine, involving generating lots of buffers in different Azimuthal Equidistant Projections.
 - I learnt a lot...and my code gets to within 100 km of the recognised values.
 - Coastline/country data from Natural Earth
+
+## day 7 - navigation
+Polar Wander
+
+<img src ="day7_navigation/day7.png" width=300>
+
+- data from Natural Earth and [National Centers for Environmental Information (NOAA)](https://www.ncei.noaa.gov/products/wandering-geomagnetic-poles)
+- data presented is from the International Geomagnetic Reference Field ([IGRF](https://geomag.bgs.ac.uk/research/modelling/IGRF.html))
+- projections: North/South Polar Stereographic.
