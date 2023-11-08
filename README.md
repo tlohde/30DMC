@@ -60,3 +60,12 @@ Polar Wander
 - data from Natural Earth and [National Centers for Environmental Information (NOAA)](https://www.ncei.noaa.gov/products/wandering-geomagnetic-poles)
 - data presented is from the International Geomagnetic Reference Field ([IGRF](https://geomag.bgs.ac.uk/research/modelling/IGRF.html))
 - projections: North/South Polar Stereographic.
+
+## day 8 - africa
+Mount Kiliman-SAR-o
+
+<img src ="day8_africa/day8.png" width=300>
+
+- Following [this](https://planetarycomputer.microsoft.com/dataset/sentinel-1-grd#Example-Notebook) notebook in Microsoft Planetary Computer
+- Data from Copernicus Sentinel 1B
+- False colour composite (VV,VH,VV/VH)
