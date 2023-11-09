@@ -69,3 +69,14 @@ Mount Kiliman-SAR-o
 - Following [this](https://planetarycomputer.microsoft.com/dataset/sentinel-1-grd#Example-Notebook) notebook in Microsoft Planetary Computer
 - Data from Copernicus Sentinel 1B
 - False colour composite (VV,VH,VV/VH)
+
+## day 9 - hexagons
+Hexagons tile the (great) plain(s)
+
+<img src ="day9_hexagons/day9.png" width=300>
+
+- hexagons generated using h3-py
+- hexagons shaded by elevation
+    - using elevation data from ASTER (NASA/METI) and the [open topo api](https://api.opentopodata.org/v1/aster30m)
+- outline of the *Great Plains* from [here](https://cartographyvectors.com/map/1288-us-great-plains)
+- coastline/country data from Natural Earth
