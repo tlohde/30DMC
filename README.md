@@ -80,3 +80,13 @@ Hexagons tile the (great) plain(s)
     - using elevation data from ASTER (NASA/METI) and the [open topo api](https://api.opentopodata.org/v1/aster30m)
 - outline of the *Great Plains* from [here](https://cartographyvectors.com/map/1288-us-great-plains)
 - coastline/country data from Natural Earth
+
+## day 10 - north america
+Impact Craters in North America
+
+<img src = "day10_northamerica/day10.png" width=300>
+
+- parsing html in `pandas` is easy
+- formatting columns that contain lots of different characters around the numbers is fiddly
+- also fiddly: sorting out the legend. three cheers for [this](https://stackoverflow.com/a/73354795) stack overflow answer
+- data from the [Earth Impact Databse](http://www.passc.net/EarthImpactDatabase/New%20website_05-2018/NorthAmerica.html) and Natural Earth
