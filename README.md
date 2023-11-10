@@ -90,3 +90,22 @@ Impact Craters in North America
 - formatting columns that contain lots of different characters around the numbers is fiddly
 - also fiddly: sorting out the legend. three cheers for [this](https://stackoverflow.com/a/73354795) stack overflow answer
 - data from the [Earth Impact Databse](http://www.passc.net/EarthImpactDatabase/New%20website_05-2018/NorthAmerica.html) and Natural Earth
+
+## day 11 - retro
+Hardangerjøkulen
+
+<img src = "day11_retro/day11_retro.png" width=300>
+
+- Hardangerjøkulen is an ice cap in Norway. This map features the north eastern portion of the ice cap (stippled) along with a few of the ice marginal lakes (diagonal hatched). The lake NE of the summit marked Ramnabergnuten is Ramnabergvatnet.
+
+
+- elevation data taken from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
+    - contours generated using matplotlib
+- mountain peaks, glacier and lake outlines grabbed from Open Street Map using #osmnx
+- to fulfill the **retro** criteria:
+    - axes background set to sepia
+    - figure exported as `.png`
+    - exported figure read back in as array
+    - applied gaussian blur (`scipy.ndimage`) added some gaussian noise (`np.random.normal`) and then rotated it by 1 degree (`scipy.ndimage.rotate`) to give it that photocopied badly look.
+- this was very much inspired by figures in Journal of Glaciology, e.g. [this](day11_retro/thorarinsson_1953.png) by [Sigurudur Thorarinsson](10.3189/S0022143000025454) and [this](day11_retro/sugden_1985.png) by [David Sugden et al.,](doi:10.3189/S0022143000006729)
+
