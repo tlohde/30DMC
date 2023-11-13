@@ -1,11 +1,10 @@
-day2_lines/cache
+*/cache
 day2_lines/Download_onshore_250k_faults
 day3_polygons/VHS*
-day4_badmap/cache
 day21_raster
 */*.zip
 misc/
 .vscode/
 ideas.md
 day9_hexagons/with_z.geojson
-day11_retro/cache
+*/*.feather

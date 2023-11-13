@@ -122,3 +122,40 @@ laguna del carbón
 - hill shading done with `xarray-spatial`
 - re-projecting handled with `rioxarray` and `cartopy`
 - made use of matplotlib's: `colors.TwoSlopeNorm` to get the asymmetry in the colorbar.
+
+
+## day 13 - choropleth
+rocks and water
+- bivariate choropleth map showing how hilly and rivery a region is
+    - hilly-ness is based on the standard deviation of elevation
+    - rivery-ness is based on the total length of streams and rivers
+
+<img src="day13_choropleth/day13.png" width=300>
+
+- heaxagons generated using `h3py` and `h3pandas` (`h3.polyfill_resample(4)`)
+- coastline from Natural Earth
+- elevation data taken from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
+- rivers and streams from OSM using `osmnx` with `tags={'waterway':['river','stream']}`
+
+### methods
+- to get the hexagons to clip nicely to the coastline, i first buffered the coastline by 50 km.
+- i don't normalize `river_lengths` by hexagon area...but maybe i should to account for the fact that i have clipped the heaxagons around the coastline
+
+- elevation stats (min, max, mean, std, var) were computed for each hexagon using `dask` and `rio.xarray` to directly query the COGs
+    - this involves masking the COG to each hexagon, and in some cases retrieving multiple hexagons for each DEM, unravelling then stacking the values then computing the statistics
+    - this was greatly aided by `dask.array` and `rio.open_rasterio(parse_coordinates=False)`
+    - referencing: [this](https://github.com/corteva/rioxarray/issues/115) rioxarray question on git hub, and [this](https://gis.stackexchange.com/questions/357490/mask-xarray-dataset-using-a-shapefile) post on stack exchange.
+
+- to construct the bivariate color scheme i followed [this code](https://github.com/mikhailsirenko/bivariate-choropleth) : which was extremely helpful
+
+- i didn't pay too much attention to the relationship between river_length and elevation standard deviation (although they are correlated: r = 0.56)
+
+<img src = "day13_choropleth/hilly_vs_rivery.png" width=300>
+
+- `jenkspy` was used to create the 4 *natural breaks* in the river_lengths and elevation standard deviation
+
+- the bivariate colormap was created from two sequential colormaps (`Blues` and `Oranges`), from which 4 colours were indexed using the normalized natural breaks. Each combination of the 2 sets of 4 colours were combined by multiplying the respective RGBA channels to make a new colour: [(r1 $\times$ r2),(g1 $\times$ g2),(b1 $\times$ b2),(a1 $\times$ a2)]. thanks to [this answer](https://gamedev.stackexchange.com/questions/84321/how-do-i-multiply-two-rgba-colours).
+    - another option would have been to use [this handy Bivariate Choropleth Color Generator](https://observablehq.com/@benjaminadk/bivariate-choropleth-color-generator)
+
+- legend: matplotlib `floating_axes` which was (tediously) rotated following [this](https://matplotlib.org/stable/gallery/axisartist/demo_floating_axes.html) guide, and [this answer](https://stackoverflow.com/a/21654433) on stack overflow
+
