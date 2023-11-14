@@ -159,3 +159,10 @@ rocks and water
 
 - legend: matplotlib `floating_axes` which was (tediously) rotated following [this](https://matplotlib.org/stable/gallery/axisartist/demo_floating_axes.html) guide, and [this answer](https://stackoverflow.com/a/21654433) on stack overflow
 
+## day 14 - europe
+dolomiti di brenta
+
+<img src="day14_europe/day14.png" width=300>
+
+ - elevation data taken from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
+- all other features from  OSM using `osmnx`
