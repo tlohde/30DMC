@@ -1,10 +1,10 @@
+misc/
+.vscode/
 */cache
+*/*.feather
+*/*.zip
+ideas.md
+day9_hexagons/with_z.geojson
 day2_lines/Download_onshore_250k_faults
 day3_polygons/VHS*
 day21_raster
-*/*.zip
-misc/
-.vscode/
-ideas.md
-day9_hexagons/with_z.geojson
-*/*.feather
