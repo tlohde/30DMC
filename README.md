@@ -164,5 +164,16 @@ dolomiti di brenta
 
 <img src="day14_europe/day14.png" width=300>
 
- - elevation data taken from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
+- elevation data taken from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
 - all other features from  OSM using `osmnx`
+
+## day 15 - open street map
+benches
+
+<img src="day15_osm/day15.png" width=300>
+
+- data from OpenStreetMap using the following `osmnx` query:
+    - `osmnx.features_from_place('United Kingdom, tags={'amenity':'bench'})`
+- centroids were calculated for benches that are described by linestrings and polygons
+- thats it. thats the map.
+
