@@ -177,3 +177,45 @@ benches
 - centroids were calculated for benches that are described by linestrings and polygons
 - thats it. thats the map.
 
+
+## day 16 - oceania
+oceania
+
+<img src="day16_oceania/day16.png" width=300>
+
+- data from Natural Earth
+- nothing special here. tried a few things that I couldn't quite get to work...
+    - distance to the coast was thwarted by the seam in the ocean geometry at (-)180 degrees
+    - bathymetry from GEBCO was taking too long to download
+    - Gave up trying to divide up ~1500 coordinate pairs in strings that were long enough so as not to make too many requests, but short enough to not be too long for Open Topo API to accept them
+
+
+## day 17 - flow
+dry valleys
+- in this corner of Sussex, just east of Brighton, the South Downs tumble to sea. Comprised of permeable chalk (a calcareous limestone) surface streams are rare...unless it's the last glacial maximum and it's all underlain by impermeable permafrost.
+
+two submissions today
+- same area, same data, but different
+
+- elevation data taken, as usual, from Copernicus Global DEM (ESA) via Planetary Computer.
+
+### first:
+
+<img src="day17_flow/day17.png" width=300>
+
+- flow accumulation generated (using the excellent `richdem` package) for both the regular topography, and the inverted (`* -1`).
+    - the inverse effectively highlights ridges (green), blues for valley floors.
+- these were symbolised by countouring them (with *a lot* of levels) and a `LogNorm` colormap.
+- overliad on these were the (inverse) flow accumulations (from which the contours were derived)
+- and then on top of it all a hillshade.
+
+### second:
+<img src="day17_flow/day17_b.png" width=300>
+
+- a quiver plot with arrows pointing downslope (derived from aspect)
+- length of arrows is a proportional to gradient (derived from slope surface)
+- arrows are coloured by aspect (three cheers for cyclical colormaps)
+- the resulting plot was too regular...so i added a load of randomness:
+    - which makes this ungodly mess. that *sort of* (maybe) looks like it has been sketched.
+    - and the underlying terrain is completely obscured.
+- hillshade dumped on top.
