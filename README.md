@@ -219,3 +219,20 @@ two submissions today
     - which makes this ungodly mess. that *sort of* (maybe) looks like it has been sketched.
     - and the underlying terrain is completely obscured.
 - hillshade dumped on top.
+
+
+## day 18 - atmosphere
+cloudfree
+
+<img src="day18_atmosphere/day18_b.png" width=300>
+
+- an illustration of the utility of SAR
+- data taken from the [Sentinel-2 Level 2a](https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a) and the [Sentinel-1 RTC](https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-1-rtc) `STAC` collections hosted on Planetary Computer
+- used `pystac` to identify pairs of Sentinel-1 and Sentinel-2 images that were separated by as small a time interval as possible and both completely contained the area of interest.
+- the `eo:cloud_cover` parameter was tuned to identify cloudy Sentinel-2 scenes.
+- S2 scene displayed with the aid of [`xrs.MultiSpectral.true_color`](https://xarray-spatial.org/reference/_autosummary/xrspatial.multispectral.true_color.html)
+- two versions made - one with single polarisation from S1, another with false colour composite.
+
+### other idea
+- had wanted to do something with radiosonde tracks, but couldn't find any data.
+- 
