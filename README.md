@@ -235,4 +235,30 @@ cloudfree
 
 ### other idea
 - had wanted to do something with radiosonde tracks, but couldn't find any data.
-- 
+
+
+## day 19 - 5 minute map
+jetlag
+
+<img src="day19_5minute/day19.png">
+
+- if timezones were 5 minutes wide
+- Portugal is 15 minutes wide...Norway on the other hand.
+- data from Natural Earth
+
+## day 20 - outdoors
+
+## day 21 - raster
+
+## day 22 - north is not always up
+national north
+
+<img src = "day22_north/day22.png" width=300>
+
+<img src = "day22_north/day22_africa.png" width=300>
+
+<img src = "day22_north/day22_europe.png" width=300>
+
+- data from natural earth
+- each country (/each island) rotated 180 degrees about it's centroid
+- London to the South of France via the Highlands.
