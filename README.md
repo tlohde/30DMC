@@ -247,6 +247,21 @@ jetlag
 - data from Natural Earth
 
 ## day 20 - outdoors
+views
+
+<img src="day20_outdoors/day20.png">
+
+- what can be seen from hill tops in the cairngorms?
+    - lighter colours = can be seen from more hill tops;
+    - darker colours = can be seen from fewer
+- the most visible spot is ~10 m from the summit of Cac Càrn Beag (1156 m) in the south east of the park, which can be seen from 289 other summits.
+- colour scale is logarithmic.
+- peaks taken from OpenStreetMap (709 of them)
+- national park boundary also from OpenStreetMap
+- DEM from Copernicus Global DEM (30 m) (ESA, 2021) accessed via Planetary Computer
+- viewsheds computed using `gdal.ViewshedGenerate` with a maximum distance of 80 km.
+ 
+- did also try doing this in ArcGIS using `arcpy.agolservices.Viewshed()`
 
 ## day 21 - raster
 
