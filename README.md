@@ -260,10 +260,20 @@ views
 - national park boundary also from OpenStreetMap
 - DEM from Copernicus Global DEM (30 m) (ESA, 2021) accessed via Planetary Computer
 - viewsheds computed using `gdal.ViewshedGenerate` with a maximum distance of 80 km.
- 
+- [this](https://gis.stackexchange.com/questions/434417/an-example-for-viewshed-analysis-in-python/456240#456240) stackexchange post was helpful
+- as was realising that driver could = `MEM`, and stacking a list of `gdal.Dataset` into a `vrt` and exporting to tif, is quick and easy
+
 - did also try doing this in ArcGIS using `arcpy.agolservices.Viewshed()`
 
+
 ## day 21 - raster
+fields
+
+<img src='day21_raster/day21.png' width=300>
+
+- data from Copernicus Sentinel 2 (2023) via Microsoft's Planetary Computer
+- random band false colour composites
+
 
 ## day 22 - north is not always up
 national north
