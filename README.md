@@ -290,7 +290,7 @@ true, grid, magnetic: LOCAL
 - London to the South of France via the Highlands.
 
 ## day 23 - 3d
-*and* and animation
+*and* an animation
 
 <img src = "day23_3d/day23.gif" width=300>
 
