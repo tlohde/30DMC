@@ -276,7 +276,8 @@ fields
 
 
 ## day 22 - north is not always up
-national north
+the fourth north.
+true, grid, magnetic: LOCAL
 
 <img src = "day22_north/day22.png" width=300>
 
@@ -287,3 +288,11 @@ national north
 - data from natural earth
 - each country (/each island) rotated 180 degrees about it's centroid
 - London to the South of France via the Highlands.
+
+## day 23 - 3d
+*and* and animation
+
+<img src = "day23_3d/day23.gif" width=300>
+
+- elevation data from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
+- DEM randomly sampled at 1200 points, and triangulated with `matplotlib.tri.Triangulation` and also animated with matplotlib.
