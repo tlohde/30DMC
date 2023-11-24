@@ -292,7 +292,27 @@ true, grid, magnetic: LOCAL
 ## day 23 - 3d
 *and* an animation
 
-<img src = "day23_3d/day23.gif" width=300>
+<img src = "day23_3d/rotation.gif" width=300>
 
 - elevation data from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
 - DEM randomly sampled at 1200 points, and triangulated with `matplotlib.tri.Triangulation` and also animated with matplotlib.
+
+## day 24 - black & white
+moraines
+
+<img src="day24_bw/day24.png" width=300>
+
+- RGB image from Sentinel 2 (Copernicus, ESA) on 23rd September 2022, accessed via Planetary Computer
+- shows terminus of Brúarjökull, on the northern side of Vatnajökull.
+
+## day 25 - antarctica
+dry valleys (again)
+
+<img src="day25_antarctica/day25.png" width=300>
+
+The McMurdo Dry valleys are ***old*** and barren, and stunningly beautiful. And one of the few ice-free areas on the continent. And these lakes are very salty.
+
+- elevation data from Copernicus Global Digital Elevation Model (ESA 2021) and accessed via [Planetary Computer](https://planetarycomputer.microsoft.com/dataset/cop-dem-glo-30)
+- peaks, water features etc from OpenStreetMap via `osmnx`
+- contours made with `matplotlib`
+- projections handled by `cartopy`
