@@ -316,3 +316,13 @@ The McMurdo Dry valleys are ***old*** and barren, and stunningly beautiful. And 
 - peaks, water features etc from OpenStreetMap via `osmnx`
 - contours made with `matplotlib`
 - projections handled by `cartopy`
+
+## day 26 - minimal
+minimum rotated rectangles
+
+<img src="day26_minimal/day26.png" width=300>
+
+- coastlines from Natural Earth.
+- projection: Robinson
+- for each country's geometry get the `minimum_rotated_rectangle` in the projected coordinate system
+    - in the case of multi-polygons - explode them, then get *mrr* for each part

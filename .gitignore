@@ -3,6 +3,7 @@ misc/
 */cache
 */*.feather
 */*.zip
+*/*.parquet
 ideas.md
 day9_hexagons/with_z.geojson
 day2_lines/Download_onshore_250k_faults
