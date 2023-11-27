@@ -326,3 +326,28 @@ minimum rotated rectangles
 - projection: Robinson
 - for each country's geometry get the `minimum_rotated_rectangle` in the projected coordinate system
     - in the case of multi-polygons - explode them, then get *mrr* for each part
+
+## day 27 - dot
+dot filled Tanaka contours
+
+<img src="day27_dot/day27.png" width=300>
+
+- elevation data form Coperniuc Globaal DEM (ESA,2023) via Planetary Computer.
+- used `xrspatial.classify.equal_interval` to bin elevations into ~20 m high buckets (`k=10`)
+- used `geocube.vector.vectorize` to polygonize the classified array
+- each polygon plotted using `matplotlib` and increasing the `hatch` density from `""` to `"........."`.
+- contours generated using `contourpy`
+- and contour shading done in the style of [Tanaka](http://wiki.gis.com/wiki/index.php/Tanaka_contours)
+- [this link](https://anitagraser.com/2015/05/24/how-to-create-illuminated-contours-tanaka-style/) was helpful
+
+## day 28 - chart
+rhumbs
+
+<img src="day28_chart/day28.png" width=300>
+
+- data from Natural Earth
+- equations for calculating rhumb line bearings and distances from [here](http://www.movable-type.co.uk/scripts/latlong.html)
+- annotations moved so as not to overlap using the `adjustText` package.
+- the result is a bit chaotic - but I sort of quite like it
+- text is coloured by bearing, using cyclical colormap
+- **note**: distances are not the shortest (great circle) distance, but rather the distance you would walk when following the compass bearing
