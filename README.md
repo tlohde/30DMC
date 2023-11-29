@@ -351,3 +351,23 @@ rhumbs
 - the result is a bit chaotic - but I sort of quite like it
 - text is coloured by bearing, using cyclical colormap
 - **note**: distances are not the shortest (great circle) distance, but rather the distance you would walk when following the compass bearing
+
+## day 29 - population
+zero
+
+<img src="day29_population/day29.png" width=300>
+
+- coastline from Natural Earth
+- points are from Wikipedia's [list of Uninhabited islands by country](https://en.wikipedia.org/wiki/Category:Uninhabited_islands_by_country).
+    - the list of uninhabited islands within each country was traversed and the coordinates extracted using the `https://en.wikipedia.org/w/api.php` API
+    - sometimes the lists contained additional categories
+        - these were also traversed
+            - sometimes these lists contained additional categories
+                - these were also traversed
+- multiple times
+- meaning i've probably include a few things that aren't islands
+- and have almost certainly missed a few as well.
+    - i missed [83-42](https://en.wikipedia.org/wiki/83-42)
+    - which is my new favourite island
+- shame OpenStreetMap doesn't have a tag `{island:uninhabited}` - would have been useful.
+- all in all - not too happy with this one.
