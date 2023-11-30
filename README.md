@@ -371,3 +371,19 @@ zero
     - which is my new favourite island
 - shame OpenStreetMap doesn't have a tag `{island:uninhabited}` - would have been useful.
 - all in all - not too happy with this one.
+
+
+## day 30 - my favourite
+hills and OpenStreetMap
+
+<img src="day30_favourite/day30.png" width=300>
+
+- data from OpenStreetMap (2023) via overpass turbo API.
+- tags = {'natural':'peak'}
+- projected with `cartopy` and `geopandas`
+- rendered with the help of `datashader` and `matplotlib`.
+
+---
+---
+---
+done

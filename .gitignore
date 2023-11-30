@@ -1,6 +1,6 @@
 misc/
 .vscode/
-*/cache
+*/*cache
 */*.feather
 */*.zip
 */*.parquet
@@ -11,3 +11,4 @@ day3_polygons/VHS*
 day20_outdoors/gdal/*
 day20_outdoors/*.geojson
 day20_outdoors/*.tif
+*/.osm_cache
