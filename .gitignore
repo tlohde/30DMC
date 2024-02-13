@@ -2,8 +2,14 @@
 */misc/
 */*/*cache
 */*/*.feather
+*/*/*.gpx
+*/*/*.tif*
+*/*/*.[dps][bhr][3fpxj]
 */*/*.zip
 */*/*.parquet
+*/*/.osm_cache
+*/*/*.tmp
+*/*.kmz
 */ideas.md
 */day9_hexagons/with_z.geojson
 */day2_lines/Download_onshore_250k_faults
@@ -11,4 +17,3 @@
 */day20_outdoors/gdal/*
 */day20_outdoors/*.geojson
 */day20_outdoors/*.tif
-*/*/.osm_cache
