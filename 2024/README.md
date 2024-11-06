@@ -85,7 +85,20 @@ springs and pubs of Hungary.
 ## 6 - Raster
 >A map using raster data. Rasters are everywhere, but today’s focus is purely on grids and pixels—satellite imagery, heatmaps, or any continuous surface data. 🟦🟧
 
-- relative elevation model...
+i had two ideas for today. and the first one didn't take very long, so i did #2 as well.
+### part a
+![mackenzie distributaries](day6/day6.png)
+- a relative elevation model [(see this)](https://opentopography.org/blog/new-package-automates-river-relative-elevation-model-rem-generation) of some channels of the Mackenzie river not that from Inuvik.
+- the RiverREM package just uses the longest channel when computing relative elevations...i wanted to use _all_ the channels, so instead followed [this](https://github.com/DahnJ/REM-xarray/blob/master/rem-in-xarray-tutorial.ipynb) tutorial. which had the added benefit of not requiring the input DEMs to be saved....meaning I could reuse some code I wrote a while ago to lazily get, clip and mask ArcticDEM COGs
+- that's where the elevation data came from: ArcticDEM (Porter et al., 2023)
+- river data from OpenStreetMap
+
+### part b
+![station proximity](day6/day6_2.png)
+- distance to the nearest tube/railway station in London
+- KDTree for getting distances from each railway station to every point on a 10 x 10 m grid (across _all_ of London) only took ~20 seconds.
+- used colormap from [Fabio Crameri](https://www.fabiocrameri.ch/colourmaps/)
+
 
 ## 7 - Vintage style
 >Map something modern in a vintage aesthetic. Create a map that captures the look and feel of historical cartography but focuses on a contemporary topic. Use muted colors, fonts, and classic elements. 🕰️🗺️
