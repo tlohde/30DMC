@@ -2,6 +2,10 @@
 */misc/
 **.feather
 **.gpx
+**.shp
+**.cpg
+**.sbn
+**.xml
 **.tif*
 **.[dps][bhr][3fpxj]
 **.zip
@@ -19,3 +23,7 @@ ne_**
 2023/day2_lines/Download_onshore_250k_faults
 2023/day3_polygons/VHS*
 2023/day20_outdoors/gdal/*
+2024/day5/struve_arc_smith_2005.pdf
+2024/day12/Iowa_Stream_Order/**
+2024/day12/*.pdf
+2024/misc.ipynb

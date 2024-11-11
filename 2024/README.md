@@ -89,42 +89,76 @@ i had two ideas for today. and the first one didn't take very long, so i did #2 
 ### part a
 ![mackenzie distributaries](day6/day6.png)
 - a relative elevation model [(see this)](https://opentopography.org/blog/new-package-automates-river-relative-elevation-model-rem-generation) of some channels of the Mackenzie river not that from Inuvik.
-- the RiverREM package just uses the longest channel when computing relative elevations...i wanted to use _all_ the channels, so instead followed [this](https://github.com/DahnJ/REM-xarray/blob/master/rem-in-xarray-tutorial.ipynb) tutorial. which had the added benefit of not requiring the input DEMs to be saved....meaning I could reuse some code I wrote a while ago to lazily get, clip and mask ArcticDEM COGs
+
+- the `RiverREM` package just uses the longest channel when computing relative elevations...i wanted to use _all_ the channels, so instead followed [this](https://github.com/DahnJ/REM-xarray/blob/master/rem-in-xarray-tutorial.ipynb) tutorial. which had the added benefit of not requiring the input DEMs to be saved....meaning I could reuse some code I wrote a while ago to lazily get, clip and mask ArcticDEM COGs
+- so, here all the river channels have the surface elevation
 - that's where the elevation data came from: ArcticDEM (Porter et al., 2023)
 - river data from OpenStreetMap
 
 ### part b
 ![station proximity](day6/day6_2.png)
 - distance to the nearest tube/railway station in London
-- KDTree for getting distances from each railway station to every point on a 10 x 10 m grid (across _all_ of London) only took ~20 seconds.
+- `KDTree` for getting distances from each railway station to every point on a 10 x 10 m grid (across _all_ of London) only took ~20 seconds.
 - used colormap from [Fabio Crameri](https://www.fabiocrameri.ch/colourmaps/)
+- stations and River Thames taken from OpenStreetMap with `omsnx`
 
 
 ## 7 - Vintage style
 >Map something modern in a vintage aesthetic. Create a map that captures the look and feel of historical cartography but focuses on a contemporary topic. Use muted colors, fonts, and classic elements. 🕰️🗺️
 
-- somewhere with coastline, and canals and bathymetry
+![day7](day7/day7_post.png)
+- river, buildings, tunnel and cable car from OpenStreetMap with `osmnx`.
+- used `with plt.xkcd()` for slightly wiggly lines
+- and wrote little function for plotting individual `geopandas`/`shapely` geometries as they were still not wiggling (something to do with `sketch_params()` and `LineCollections()`
+- plotted building exteriors buffered by 1 m. and then an interior buffer of 1 m the same color as the background to make it look like the colour spills over the lines
+- lots of hatching on the background, and buildings.
+- includes the point where the Greenwich Meridian crosses the Thames.
 
 
 ## 8 - Humanitarian Data Exchange (HDX)
 >Use data from HDX to map humanitarian topics. Explore the datasets from the Humanitarian Data Exchange, covering disaster response, health, population, and development. Map for social good. 🌍🚑
- 
+
+![hdx](day8/day8.png)
+
+- used [this](https://data.humdata.org/dataset/areas-burned-from-february-3rd-to-18th-2024-around-the-pico-basil-volcano-on-bioko-island-) data of burned area subsequent to euroption of Pico Basile volcano in Equatorial Guinea
+- volcano poi from OpenStreetMap and elevation from Copernicus Global DEM.
+
 ## 9 - AI only
->This day is all about prompt engineering. Use AI tools like DALL-E, MidJourney, Stable Diffusion, or ChatGPT with geospatial capabilities to create a map based on AI-generated content. The challenge is to get the right prompt and critically assess the output—how well does AI capture or distort the map's intent?",
+>This day is all about prompt engineering. Use AI tools like DALL-E, MidJourney, Stable Diffusion, or ChatGPT with geospatial capabilities to create a map based on AI-generated content. The challenge is to get the right prompt and critically assess the output—how well does AI capture or distort the map's intent?"
+
+- didn't play along today.
 
 ## 10 - Pen & paper
 >Draw a map by hand. Go analog and draw a map using pen and paper. The result doesn’t have to be perfect—it’s about the creative process. ✏️🗺️
 
+![pen & paper](day10/day10.jpg)
+
+- projection woes.
+
+
 ## 11 - Arctic
 >Map the Arctic. Whether it’s ice coverage, wildlife habitats, or the effects of climate change, this day is all about mapping the cold extremes of the Arctic. ❄️🧊
 
-- something from my thesis / paper
-- dh/dt
+![Isortuarsuup Sermia](day11/fig3_day11.png)
+
+- Isortuarsuup Sermia, a lake-terminating outlet glacier in south-west Greenland. (a) change in average annual velocity between 2013–2021; (b) rate of surface elevation change (September 2012– June 2021) from ArcticDEM (negative denotes thinning); manually digitised ice margin shown in black in (a) and (b); (c) terminus positions 2014–2021. Red box in (a) denotes extent of (c). White arrows in (c) indicates the Little Ice Age trim-line and the black arrow points to the associated terminal moraine with icebergs grounded on its sublacustrine extension indicated by the orange arrow.
+- figure 3 from my paper, which can be found [here](https://www.cambridge.org/core/journals/journal-of-glaciology/article/terminus-thinning-drives-recent-acceleration-of-a-greenlandic-laketerminating-outlet-glacier/762985B2AC938AB88E0C8CCEFE3042F2)
+
 
 ## 12 - Time and space
 >Map something where time matters. Visualize change over time—urban growth, migration, or environmental shifts. Show the relationship between time and geography. ⏳🌍
 
-- terminus retreat
+- space time substitution or the ergodic hypothesis.
+    - a slightly old fashioned view of landscape evolution. that relies heavily on the assumption that different locations are at different points along the same evolutionary arc...i.e. moving fifty km west is equivalent to travelling ~2,000 years back in time. or whatever.
+- here i have recreated a plot from [R. V. Ruhe _Amer. Journal Sci._, (1952)](https://ajsonline.org/article/58368) that shows three counties (Cherokee, Buena Vista and Pocahontas) in north western Iowa that are within the Des Moines Lobe - which is comprised of sheets of till deposited during the Wisconsinian. Areas that have been exposed for longer (in the west) have been more extensively dissected by drainage networks, than those that have not had as long to _evolve_ (in the east).
+- in the [original](https://ajsonline.org/article/58368) figure caption it says:
+    - >compiled from maps showing natural drainage systems of these counties, Iowa Agric. Exper. Sta.
+- initially i used (as per) OpenStreetMap to get all waterways (streams and rivers) - and that did *not* show the same pattern. So, I assumed that OpenStreetMap was missing some. I went hunting for some other river data but couldn't find any...so grabbed some elevation from the Copernicus Global DEM (30 m) made a hillshade and used `richdem` to calculate flow accumulation, and the results were pleasing...
+![day12 v1](day12/day12.png)
+- then found some [data](https://www.arcgis.com/home/item.html?id=162bfe26ec4f4979a2238e03740fd077) from the Iowa Department of Natural Resources...
+![day12 v2](day12/day12_v2.png)
+- which is much better.
+- and this data included stream order, which enabled me to vary the linewidth with stream order. magic.
 
 ## 13 - A new tool
 >Use a tool you’ve never tried before. The challenge has always been about trying new things. Use a tool, software, or drawing technique you’ve never worked with before. 🧪🔧
