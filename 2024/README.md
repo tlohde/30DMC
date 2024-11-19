@@ -166,31 +166,62 @@ i had two ideas for today. and the first one didn't take very long, so i did #2 
 - overpass turbo
 - lonboard
 - blender
-- grass!
+- grass
 
 ## 14 - A world map
 >Map the whole world. Whether it’s continents, ecosystems, or oceans, this is the day to map the entire planet. 🌍
 
-- geology / crust age.
-- when did it last rain...
+The Two Hemispheres: land, and water
+https://en.wikipedia.org/wiki/Land_and_water_hemispheres
+![day 14](day14/day14.png)
+- hemisphere centred on 47.2 N 1.53 W (near Nantes, France) is the hemisphere that contains the largest proportion of land, and its antipode has the largest proportion of water.
+- projection - azimuthal equidistant. when really it should be an equal area, but I couldn't work out where the 'equator' was on this for the sake of clipping
 
 
 ## 15 - My data
 >Map something personal. Map data from your own life—this could be places you’ve travelled, your daily routine, or any other personal touch. 🗒️
 
-- my network
+my network
+![day 15](day15/day15.png)
+- from [this](https://tlohde.blog/2024/05/10/on-networking/) blog post
+- added an inset of london
 
 ## 16 - Choropleth
 >Classic choropleth map. Use color to show data variation across regions. This simple but effective technique is a staple for showing thematic differences. 🎨
 
+hungarian springs
+
+![hungarian springs](day16/day16.png)
+- reused code/data from day [[#4 - Hexagons]].
+- just showing natural springs.
+- colobar is logarithmic
+
 ## 17 - Collaborative map
 >Collaborate with others on a single map. For today’s challenge, team up! Whether you work with one person or several, the idea is to combine your efforts on a single map. 🤝🗺️
+
+fetch in the dark with izgi the dog
+![park](day17/day17.png)
+
+- strapped an old gps watch to the dog's harness
+- walked a lap of the park. stopping by all the benches. chucked the ball a lot.
+- shame the sampling frequency of the old watch isn't that good.
+
 
 ## 18 - 3D
 >Map with depth. Add a third dimension to your map. Whether it’s visualizing elevation, buildings, or something more abstract, today’s about thinking beyond flat surfaces. 🎢🏔️
 
+- had intended on doing something a bit _more_ today. but time...
+- animation of ridge plot, varying elevation angle
+- Glen Dee in the cairngorms
+![day18](day18/day18.gif)
+
+
 ## 19 - Typography
 >Map focused on typography. Let text and words do the heavy lifting today. Whether you’re focusing on place names, labeling, or using text to create shapes and patterns. ✍️🅰️
+
+river & bridges
+![day19](day19/day19.png)
+- quite fiddly this one
 
 ## 20 - OpenStreetMap
 >Use OpenStreetMap data to create something. OpenStreetMap offers rich, editable data from roads to buildings and beyond. The goal is to showcase the power of this community-driven dataset. 🗺️📍
