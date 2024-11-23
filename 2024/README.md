@@ -214,6 +214,7 @@ fetch in the dark with izgi the dog
 - animation of ridge plot, varying elevation angle
 - Glen Dee in the cairngorms
 ![day18](day18/day18.gif)
+- definitely something a bit wrong with the vertical exaggeration.
 
 
 ## 19 - Typography
@@ -224,21 +225,27 @@ river & bridges
 - quite fiddly this one
 
 ## 20 - OpenStreetMap
+
 >Use OpenStreetMap data to create something. OpenStreetMap offers rich, editable data from roads to buildings and beyond. The goal is to showcase the power of this community-driven dataset. 🗺️📍
+
+![day20](day20/day20.png)
 
 ## 21 - Conflict
 >Map a conflict. Political, territorial, or social—there are conflicts all around us. Map boundaries, tension points, or the outcomes of conflicts. ⚔️🛑
 
-- hadrians wall.
-- edge of logging / deforestation
+deforestation
+![day21](day21/day21.png)
 
 ## 22 - 2 colours
 >Create a map using only 2 colors. No gradients or shading—just two flat colors. This restriction encourages creativity in design and forces you to think about how to clearly convey your message with minimal color.
 
+![day22](day22/day22.png)
+
 ## 23 - Memory
 >Map based on memory. Create a map of a place you remember—hometown, favorite destination, or somewhere meaningful. It doesn’t need to be perfectly accurate, just how you recall it. 💭🗺️
 
-- house i grew up in
+![memory](day23/day23.png)
+![bonus figure](day23/distances.png)
 
 ## 24 - Only circular shapes
 >Map using only circles. Everything should be circular. Forget straight lines and sharp edges, and see how creative you can get by sticking to round shapes. 🔵⭕
