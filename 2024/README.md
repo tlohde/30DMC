@@ -280,6 +280,12 @@ a little island in Micronesia. [this](https://en.wikipedia.org/wiki/Pikelot#) is
 ## 28 - The blue planet
 >Map oceans, rivers, and lakes. Focus on water today. Map the oceans, rivers, or lakes, diving deep into marine environments or water systems. 🌊🐋
 
+shamelessly leaning on [this](https://github.com/rtlemos/spilhaus) repo for projecting, because as i read [here](https://github.com/OSGeo/PROJ/issues/1851) the spilhaus projection is not implemented in PROJ. add in the [`cmocean`](https://matplotlib.org/cmocean/) colormaps and some [GEBCO](https://www.gebco.net/) data...and the result is this not remotely unique map...
+
+![spilhaus](day28/day28.png)
+
+add to my to-do list, coastline length as _f_(sea level).
+
 ## 29 - Overture
 >Use data from the Overture Maps Foundation. Explore data from Overture Maps Foundation to create a map that highlights new geographic datasets. A great opportunity to dive into open geospatial data! 🌍📊
 
