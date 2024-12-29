@@ -255,21 +255,27 @@ deforestation
 - find successive largest inscribed circles
 - pretty slow to find *lots*.
 
-
 ## 25 - Heat
 >Map something related to heat. Focus on heat, whether it’s actual temperature or areas of intensity—like heatmaps of activity or metaphorical heat. 🔥
+
+hot things in iceland
+
+![iceland heat](day25/day25.png)
 
 
 ## 26 - Map projections
 >Explore different map projections and how they distort the world. Whether it's focusing on the classic Mercator, the Peters projection, or a more obscure one like the Waterman Butterfly, today is about playing with how we represent the round Earth on flat surfaces.
 
-- can i make my own?
-- or use one from that book what that i have
+a variation on Tissot's indicatrix using Greenland...
+
+![greenland](day26/day26.png)
 
 ## 27 - Micromapping
 >Map something small and precise. Zoom in and map a small area in high detail. It could be a single building, a street corner, or a tiny plot of land. Focus on accuracy at a small scale. 🧐🔍
 
-- my desk... but at a scale that is larger than 1:1.
+a little island in Micronesia. [this](https://en.wikipedia.org/wiki/Pikelot#) island
+
+![pikelot](day27/day27.png)
 
 ## 28 - The blue planet
 >Map oceans, rivers, and lakes. Focus on water today. Map the oceans, rivers, or lakes, diving deep into marine environments or water systems. 🌊🐋
